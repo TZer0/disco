@@ -118,7 +118,7 @@ class Permissible(object):
     __slots__ = []
 
     def get_permissions(self):
-        raise NotImplementedError
+        raise NotImplementedError("Permissions can only be checked in Guild or Channel")
 
     def can(self, user, *args):
         perms = self.get_permissions(user)
